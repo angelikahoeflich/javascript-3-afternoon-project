@@ -96,7 +96,12 @@ function totalPopulation (object){
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers({object}){
+  const {first, second, third} = object;
+  if{ object first < second && first < third}{
+    return object
+  } 
+}
 
 
 
@@ -108,6 +113,8 @@ function totalPopulation (object){
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups({a,b,c}){
+
+}
 
 
