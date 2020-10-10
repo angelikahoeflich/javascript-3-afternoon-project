@@ -84,7 +84,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates (){
+  let updatedArray= [];
+  workplaceAccidents.forEach(  function(workPlaceAccident){
+      if(!updatedArray.includes(workPlaceAccident)){
+        updatedArray.push(workPlaceAccident)
+      }
+  });
+  return updatedArray;
+}
 
 
 
@@ -113,8 +121,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -154,7 +162,12 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(){
+  myCar.accidents.forEach(   function(accident, i){
+    myCar.accidents[i].atFaultForAccident = false;
+  })
+    
+  }
 
 
 
