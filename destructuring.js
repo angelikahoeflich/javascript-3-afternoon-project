@@ -34,13 +34,13 @@ const{color, make, model, year} = carDetails
 
  function greeting( object ) {
     const {firstName, lastName, title} = object;
-    return object
+    return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
  }
 
  
   
 //   // Do not edit the code below.
-//   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+// return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
 //   // Do not edit the code above.
 // }
 
@@ -96,12 +96,15 @@ function totalPopulation (object){
   Find the smallest number of the three and return that number.
 */
 
-function largeNumbers({object}){
+ function largeNumbers(object){
   const {first, second, third} = object;
-  if{ object first < second && first < third}{
-    return object
-  } 
-}
+  let smallest = first;
+  if(second < smallest){
+    smallest = second;
+  } if (third < smallest){
+    smallest = third;
+  } return smallest
+ }
 
 
 
@@ -113,8 +116,14 @@ function largeNumbers({object}){
   Find the longest array and return that array.
 */
 
-function numberGroups({a,b,c}){
-
+function numberGroups(object){
+  const {a,b,c} = object;
+   let longestArray = a;
+   if( b.length > longestArray.length){
+     longestArray = b;
+   } if( c.length > longestArray.length){
+    longestArray = c;
+  } return longestArray
 }
 
 

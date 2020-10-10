@@ -40,7 +40,7 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  for ()
 }
 
 
@@ -65,7 +65,11 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double(object){
+  for (const prop in object){
+    return object * 2
+  }
+}
 
 
 
