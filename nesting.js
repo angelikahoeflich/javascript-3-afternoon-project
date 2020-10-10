@@ -163,7 +163,7 @@ var myCar = {
 */
 
 function recordCleaner(){
-  myCar.accidents.forEach(   function(accident, i){
+  myCar.accidents.forEach(  function(accident, i){
     myCar.accidents[i].atFaultForAccident = false;
   })
     
@@ -186,6 +186,20 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(){
+  let newNumbersArray = numsArr;
+
+  for(let i= 0; i < numsArr.length; i++){
+
+    for(let j= 0; j <numsArr[i].length; j++){
+      if(numsArr[i][j] % 2 === 0){
+        newNumbersArray[i][j] = 'even';
+      } else {
+        newNumbersArray[i][j] = 'odd';
+      }
+    }
+  } return newNumbersArray;
+
+}
 
 
