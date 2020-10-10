@@ -21,8 +21,8 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 
-let evenNumbers = mixedNumbers.filter(function(element, index, array){
-  return element % 2 ===0;
+const evenNumbers = mixedNumbers.filter(function(element){
+  return element % 2 === 0 ;
 });
 
 
@@ -46,7 +46,9 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 //Code Here
-let postTaxPrices = prices.map(function(element, index,array));
+let postTaxPrices = prices.map(function(element, index,array){
+  return element * 1.07}
+);
 
 
 
@@ -65,7 +67,9 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+let totalPopulation = populations.reduce(function(runningTotal, curElement)){
+  return runningTotal +curElement
+}
 
 
 
