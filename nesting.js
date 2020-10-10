@@ -49,11 +49,23 @@ var employees = [
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
-
 function employeeUpdater(){
-  if(employees.name === 'Theo'){
+  let newArray = [];
+
+  employees.forEach(  function(employee){
     
-  }
+    if(employee.firstName !== 'Theo'){
+      
+    if (employee.firstName === 'Lorie'){
+      employee.department = 'HR'
+    }
+
+    newArray.push(employee)
+    }
+
+  });
+  
+  return newArray
 }
 
 
