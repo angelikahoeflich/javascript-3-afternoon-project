@@ -40,7 +40,10 @@
 */
 
 function showValues( obj ) {
-  for ()
+  let result = '';
+  for(var prop in obj){
+    result = result + obj[prop];
+  } return result
 }
 
 
@@ -53,7 +56,13 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10 (object){
+  for(var prop in object){
+    if (object[prop] > 10){ 
+      object[prop] = 0;
+    }
+  } return object
+}
 
 
 
@@ -67,8 +76,8 @@ function showValues( obj ) {
 
 function double(object){
   for (const prop in object){
-    return object * 2
-  }
+    object[prop] = object[prop] * 2
+  } return object
 }
 
 
@@ -83,7 +92,14 @@ function double(object){
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(object){
+  let anything = '';
+  for (let prop in object){
+      if (prop.startsWith('sh')){
+        anything = anything + object[prop]
+      }
+  } return anything
+}
 
 
 
@@ -99,11 +115,11 @@ function double(object){
 //   three: 3
 // }
 
-// for(var key in deleteAllThethings) {
-//   delete deleteAllThethings[key]
-// }
+//  for(var key in deleteAllThethings) {
+//  delete deleteAllThethings[key]
+//  }
 
-// console.log(deleteAllThethings)
+//  console.log(deleteAllThethings)
 
 
 
@@ -114,7 +130,10 @@ function double(object){
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(object){
+  delete object.password
+  return object
+} 
 
 
 
@@ -133,7 +152,11 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for(var prop in deleteTheBigNumbers){
+  if(deleteTheBigNumbers[prop] > 100){ delete deleteTheBigNumbers[prop]
+
+  }
+}
 
 
 
@@ -146,7 +169,16 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+function startsWithK(object){
+  
+  for(var prop in object){
+    if( prop.startsWith('k')){
+       delete object[prop]
+    }
+  }
+  
+  return object
+}
 
 
 
@@ -161,6 +193,12 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+function hiddenTreasure(object){
+  for(var prop in object){
+    if(!object[prop].includes('treasure')){
+      delete object[prop];
+    }
+  } return object
+}
 
 
